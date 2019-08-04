@@ -5,9 +5,7 @@ import SuccessStory from './components/Success';
 
 function App() {
   return (
-    <Container>
       <SuccessStory/>
-    </Container>
   );
 }
 
