@@ -1,20 +1,27 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
 import SuccessStory from './components/Success';
+
 import ButtonAppBar from './components/header';
 import ImageGridList from './components/slider'
 import FormDialog from './components/dialogs'
 
+import FooterPage from './components/Footer';
+
+
+
 
 function App() {
   return (
-    <Container>
+    <div>
+      <ButtonAppBar />
+     <ImageGridList />
       <SuccessStory/>
 
-      <ButtonAppBar />
-    
-     <ImageGridList />
-    </Container>
+      <FooterPage/>
+    </div>
+
+
+
   );
 }
 
