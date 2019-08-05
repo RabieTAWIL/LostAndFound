@@ -2,30 +2,36 @@ import React from 'react';
 import Slider from 'react-animated-slider';
 import 'react-animated-slider/build/horizontal.css';
 import styles from './styles.module.css'
+import Container from '@material-ui/core/Container';
 
 const content =[
-  {title: 'Hello World',image:'#',description:'D1',button:'B1'},
-  {title: 'Hello Kasim',image:'#',description:'D1',button:'B1'},
-  {title: 'Hello Halil',image:'#',description:'D1',button:'B1'},
+  {title: 'Taha',image:'#',description:'Thank you so much for finding my phone. It has sensitive data so thank you for being so professional and fast. '},
+  {title: 'Kasim',image:'#',description:'Thank you very much. I now have my prized possession back after only 2 days. '},
+  {title: 'Halil',image:'#',description:'The customer host found and turned in my iPad. I am incredibly grateful!'},
 ];
 
 function SuccessStory() {
 	return (
-    <div>
+    <div className={styles.bg}>
+    <Container>     
+      <div className={styles.title}>
+        <h2>Success Story</h2>
+        <p>See how Lost and Found helped others to find their lost items.</p>
+      </div>
       <Slider autoplay={3000}>
         {content.map((items) => (
           <div
-            key='Hello World'
-            style={{ background: `url('${items.image}') no-repeat center center` }}
+            key={items.title}
+            style={{ background: `url('${items.img}') no-repeat center center` }}
           >
             <div className={styles.content}>
-              <h1>{items.title}</h1>
               <p>{items.description}</p>
-              <button>{items.button}</button>
+              <h4>{items.title}</h4>
             </div>
           </div>
         ))}
       </Slider>
+    </Container>
     </div>
 	);
 }
