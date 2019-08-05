@@ -1,0 +1,12 @@
+
+
+    root {
+      display: 'flex';
+      flex-wrap: 'wrap';
+    }
+    .formControl {
+        width: 80vh;
+    }
+.kassem {
+    width: -webkit-fill-available;
+}
