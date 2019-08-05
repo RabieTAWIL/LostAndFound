@@ -19,7 +19,7 @@
 .bg{
     background: url(../../images/sucess-bg.jpg);
     background-size: 100%;
-    background-position: 50%; 
+    background-position-y: 50%; 
 
 }
 polygon{
