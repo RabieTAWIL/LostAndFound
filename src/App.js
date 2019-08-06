@@ -3,6 +3,7 @@ import SuccessStory from './components/Success';
 import ButtonAppBar from './components/header';
 import ImageGridList from './components/slider';
 import FooterPage from './components/Footer';
+import FormDialog from './components/dialogs'
 
 
 
