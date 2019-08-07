@@ -1,0 +1,24 @@
+.card {
+  width: 238px;
+}
+.bullet {
+  display: "inline-block";
+  margin: "0 2px";
+  transform: "scale(0.8)";
+}
+
+.title {
+  font-size: 14;
+}
+.pos {
+  margin-bottom: 12;
+}
+.flex {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+.halili {
+  border: 1px solid grey;
+}
