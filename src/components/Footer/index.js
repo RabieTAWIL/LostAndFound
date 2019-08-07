@@ -2,24 +2,19 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Box, Link } from "@material-ui/core";
 
-
-function FooterPage ()  {
-
-    return (
-
-<Box color="black">
+function FooterPage() {
+  return (
+    <Box color="black">
       <Container>
-        <Row >
+        <Row>
           <Col>
             <h5 className="text-uppercase mb-4 font-weight-bold">
-              Lost & Found 
+              Lost & Found
             </h5>
+            <p>Here you can find and organize your content of your life.</p>
             <p>
-              Here you can find and organize your 
-              content of your life.
-            </p>
-            <p>
-            with our website all things between your hands , you  will not miss any thing after today.. {" "}
+              with our website all things between your hands , you will not miss
+              any thing after today..{" "}
             </p>
           </Col>
           <hr className="clearfix w-100 d-md-none" />
@@ -27,16 +22,16 @@ function FooterPage ()  {
             <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
             <ul className="list-unstyled">
               <p>
-                <a href="#!">Home</a>
+                <a href="..">Home</a>
               </p>
               <p>
                 <a href="#!">ABOUT US</a>
               </p>
               <p>
-                <a href="#!">Success Stories</a>
+                <a href="found">Success Stories</a>
               </p>
               <p>
-                <a href="#!">ReWARDS</a>
+                <a href="lost">ReWARDS</a>
               </p>
             </ul>
           </Col>
@@ -44,7 +39,8 @@ function FooterPage ()  {
           <Col md="5" lg="3">
             <h5 className="text-uppercase mb-4 font-weight-bold">Address</h5>
             <p>
-              <i className="fa fa-home mr-3" /> Gaziantep, gazimukhtar basha 10012, TR
+              <i className="fa fa-home mr-3" /> Gaziantep, gazimukhtar basha
+              10012, TR
             </p>
             <p>
               <i className="fa fa-envelope mr-3" /> taha.benzma94@gmail.com
@@ -58,10 +54,8 @@ function FooterPage ()  {
           </Col>
           <hr className="clearfix w-100 d-md-none" />
           <Col md="2" lg="2" className="text-center">
-            <h5 className="text-uppercase mb-4 font-weight-bold">
-              Follow us
-            </h5>
-            <div className="mt-2 d-flex flex-column" >
+            <h5 className="text-uppercase mb-4 font-weight-bold">Follow us</h5>
+            <div className="mt-2 d-flex flex-column">
               <Link type="button" className="btn-floating btn-lg btn-fb">
                 <i className="fab fa-facebook-f" />
               </Link>
@@ -82,7 +76,7 @@ function FooterPage ()  {
       <div className="footer-copyright text-center py-3">
         <Container fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <Link href="#"> Lost & Found </Link>
+          <Link href=".."> Lost & Found </Link>
         </Container>
       </div>
     </Box>
@@ -91,32 +85,11 @@ function FooterPage ()  {
 
 export default FooterPage;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React from 'react';
 // import { Container, Icon } from '@material-ui/core';
 // import Box from '@material-ui/core/Box';
 // import Link from '@material-ui/core/Link';
 // import {Row, Col} from 'react-bootstrap';
-
-
-  
 
 // function FooterPage() {
 //     return (
@@ -132,7 +105,7 @@ export default FooterPage;
 //                    <Col md="3">
 //                      <h5>Social Media</h5>
 //                      <ul>
-//                        <li className="list-unstyled">             
+//                        <li className="list-unstyled">
 //                         <Link href="#" color="inherit"> FaceBook</Link>
 //                        </li>
 //                      <li className="list-unstyled">
@@ -171,7 +144,7 @@ export default FooterPage;
 //                  </Container>
 //                </div>
 //              </Box>
-       
+
 //     );
 //     }
 
