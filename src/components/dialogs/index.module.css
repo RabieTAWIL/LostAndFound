@@ -1,22 +1,20 @@
-
-
-    root {
-      display: 'flex';
-      flex-wrap: 'wrap';
-    }
-    .formControl {
-        width: 50vh;
-    }
+root {
+  display: "flex";
+  flex-wrap: "wrap";
+}
+.formControl {
+  width: 50vh;
+}
 .kassem {
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
 .textField {
-    width: 350;
-  }
-  .container {
-    display: 'flex';
-    flex-wrap: 'wrap';
-  }
+  width: 350;
+}
+.container {
+  display: "flex";
+  flex-wrap: "wrap";
+}
 
 /* for new form 
 
@@ -29,5 +27,3 @@ container: {
     minWidth: 120,
 
 */
-  
-  
