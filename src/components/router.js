@@ -5,6 +5,7 @@ import FoundedItems from "./FoundedItems";
 import LostedItems from "./LostedItems";
 import ButtonAppBar from "./header";
 import FooterPage from "./Footer";
+import Rewards from "./rewards";
 
 const Router = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const Router = () => (
       <Route path="/" component={App} exact />
       <Route path="/found" component={FoundedItems} />
       <Route path="/lost" component={LostedItems} />
+      <Route path="/rewards" component={Rewards} />
     </Switch>
     <FooterPage />
   </BrowserRouter>
