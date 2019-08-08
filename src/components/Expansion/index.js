@@ -12,27 +12,35 @@ export default function ControlledExpansionPanels() {
     {
       title: "Iphone",
       description: "50$",
-      date: "12.Agu.2018",
+      date: "9.Agu.2019",
       model: "5",
       color: "black",
       location: "Gaziantep"
     },
 
     {
-      title: "backpack",
-      description: "20$",
-      date: "12.Jun.2018",
+      title: "Backpack",
+      description: "No Reward",
+      date: "12.Jun.2019",
       model: "5",
       color: "brown",
       location: "Izmir"
     },
     {
       title: "Car key",
-      description: "10$",
-      date: "30.Jan.2010",
-      model: "5",
-      color: "black",
+      description: "20$",
+      date: "30.Jul.2019",
+      model: "--",
+      color: "silver",
       location: "Istanbul"
+    },
+    {
+      title: "Kindle",
+      description: "No Reward",
+      date: "8.Agu.2019",
+      model: "--",
+      color: "black",
+      location: "Adana"
     }
   ];
 
