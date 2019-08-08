@@ -6,6 +6,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Styles from "./styles.module.css";
 import { Container } from "@material-ui/core";
+import SimpleAppBar from "../searchbar";
 
 export default function SimpleCard() {
   const bull = <span className={Styles.bullet}>•</span>;
@@ -14,28 +15,42 @@ export default function SimpleCard() {
     {
       title: "Iphone",
       description: "50$",
-      date: "12.Agu.2018"
+      date: "9.Agu.2019",
+      model: "5",
+      color: "black",
+      location: "Gaziantep"
     },
     {
-      title: "LG",
-      description: "50$",
-      date: "12.Agu.2018"
+      title: "Backpack",
+      description: "No Reward",
+      date: "12.Jun.2019",
+      model: "5",
+      color: "brown",
+      location: "Izmir"
     },
     {
-      title: "Samsung",
-      description: "50$",
-      date: "12.Agu.2018"
+      title: "Car key",
+      description: "20$",
+      date: "30.Jul.2019",
+      model: "--",
+      color: "silver",
+      location: "Istanbul"
     },
 
     {
-      title: "Ipad",
-      description: "50$",
-      date: "12.Agu.2018"
+      title: "Kindle",
+      description: "No Reward",
+      date: "8.Agu.2019",
+      model: "--",
+      color: "black",
+      location: "Adana"
     }
   ];
 
   return (
     <Container>
+      <SimpleAppBar />
+      <br />
       <div className={Styles.flex}>
         {arr.map(item => (
           <Card className={Styles.card} key={item.title}>
@@ -64,11 +79,13 @@ export default function SimpleCard() {
         ))}
         ;
       </div>
+      <br />
       <div className={Styles.flex}>
         <Button variant="outlined" color="secondary" href="rewards">
           View All Reward Items
         </Button>
       </div>
+      <br />
     </Container>
   );
 }
