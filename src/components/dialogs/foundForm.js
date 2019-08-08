@@ -11,29 +11,26 @@ import InputLabel from "@material-ui/core/InputLabel";
 import MenuItem from "@material-ui/core/MenuItem";
 import Select from "@material-ui/core/Select";
 import Styles from "./index.module.css";
-import { makeStyles } from '@material-ui/core/styles';
-
-
+import { makeStyles } from "@material-ui/core/styles";
+import ImageUpload from "../ImagesUpload";
 
 const useStyles = makeStyles(theme => ({
   container: {
-    display: 'flex',
-    flexWrap: 'wrap',
+    display: "flex",
+    flexWrap: "wrap"
   },
   textField: {
     marginLeft: theme.spacing(0),
     marginRight: theme.spacing(2),
-    width: 200,
+    width: 200
   },
   dense: {
-    marginTop: 19,
+    marginTop: 19
   },
   menu: {
-    width: 200,
-  },
+    width: 200
+  }
 }));
-
-
 
 export default function FoundForm() {
   const classes = useStyles();
@@ -123,6 +120,7 @@ export default function FoundForm() {
             margin="normal"
           />
         </DialogContent>
+        <ImageUpload />
 
         <DialogActions>
           <Button onClick={handleClose} color="primary">
