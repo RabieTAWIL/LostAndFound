@@ -30,8 +30,7 @@ export default function Rewards(props) {
     setState({ re: data });
 
 
-
-  }
+  };
   /**  async function fetchProjects() {
     const url = `${state.url}?lo=${lost}&lo${location}`
     const response = await fetch(url);
@@ -40,16 +39,10 @@ export default function Rewards(props) {
   } */
 
 
-
-
-
-
-
   console.log(location);
   console.log(lost);
   console.log(state.re);
   return (
-
     <Container>
 
       <Paper className={Styles.paperp}>
@@ -59,7 +52,9 @@ export default function Rewards(props) {
         </Typography>
         <Typography component="p">
           jhjhygtfr
+
         </Typography>
+        <Typography component="p">jhjhygtfr</Typography>
       </Paper>
     </Container>
   );

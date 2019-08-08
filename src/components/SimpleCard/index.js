@@ -1,5 +1,4 @@
 import React from "react";
-
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -82,7 +81,7 @@ export default function SimpleCard() {
       </div>
       <br />
       <div className={Styles.flex}>
-        <Button variant="outlined" color="secondary">
+        <Button variant="outlined" color="secondary" href="rewards">
           View All Reward Items
         </Button>
       </div>

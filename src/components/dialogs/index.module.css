@@ -15,15 +15,3 @@ root {
   display: "flex";
   flex-wrap: "wrap";
 }
-
-/* for new form 
-
-container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-
-*/
