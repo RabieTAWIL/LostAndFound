@@ -6,7 +6,7 @@ import LostedItems from "./LostedItems";
 import ButtonAppBar from "./header";
 import FooterPage from "./Footer";
 import Rewards from "./rewards";
-import ExpansionPanels from "./Expansion";
+import ControlledExpansionPanels from "./Expansion";
 import DetailsPage from './Details';
 
 const Router = () => (
@@ -16,7 +16,7 @@ const Router = () => (
       <Route path="/" component={App} exact />
       <Route path="/found" component={FoundedItems} />
       <Route path="/lost" component={LostedItems} />
-      <Route path="/rewards" component={ExpansionPanels} />
+      <Route path="/rewards" component={ControlledExpansionPanels} />
       <Route path="/details" component={DetailsPage}/>
     </Switch>
     <FooterPage />

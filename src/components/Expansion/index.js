@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Container } from "@material-ui/core";
 import SimpleAppBar from "../searchbar";
+import Styles from './index.module.css';
 
 export default function ControlledExpansionPanels() {
   const arr = [
@@ -45,7 +46,7 @@ export default function ControlledExpansionPanels() {
   ];
 
   return (
-    <Container>
+    <Container className={Styles.expansionP}>
       <SimpleAppBar />
       {arr.map(item => (
         <ExpansionPanel>
