@@ -13,6 +13,7 @@ import Select from "@material-ui/core/Select";
 import Styles from "./index.module.css";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageUpload from "../ImagesUpload";
+import DataField from '../DataField';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -87,13 +88,7 @@ export default function FoundForm() {
             className={classes.textField}
             margin="normal"
           />
-          <TextField
-            id="standard-with-placeholder"
-            label="Date"
-            placeholder="Data of found"
-            className={classes.textField}
-            margin="normal"
-          />
+          <DataField/>
           <TextField
             id="standard-with-placeholder"
             label="Color"
@@ -108,8 +103,6 @@ export default function FoundForm() {
             className={classes.textField}
             margin="normal"
           />
-        </DialogContent>
-        <DialogContent>
           <TextField
             id="standard-multiline-flexible"
             label="Description"
