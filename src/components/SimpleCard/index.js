@@ -11,6 +11,7 @@ import SimpleAppBar from "../searchbar";
 export default function SimpleCard() {
   const bull = <span className={Styles.bullet}>•</span>;
 
+
   const arr = [
     {
       title: "Iphone",
@@ -49,9 +50,11 @@ export default function SimpleCard() {
 
   return (
     <Container>
-      <SimpleAppBar />
+      {/* <SimpleAppBar /> */}
       <br />
+      <h1 className={Styles.tag1}>REWARD ITEMS NEAR YOU</h1>
       <div className={Styles.flex}>
+
         {arr.map(item => (
           <Card className={Styles.card} key={item.title}>
             <CardContent>
@@ -77,7 +80,7 @@ export default function SimpleCard() {
             </CardActions>
           </Card>
         ))}
-        ;
+
       </div>
       <br />
       <div className={Styles.flex}>
