@@ -1,4 +1,4 @@
-import React,{useEffect,useState} from "react";
+import React, { useEffect, useState } from "react";
 
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
@@ -7,14 +7,15 @@ import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { Container } from "@material-ui/core";
 import SimpleAppBar from "../searchbar";
-import Styles from './index.module.css';
+import Styles from "./index.module.css";
+import Avatar from '@material-ui/core/Avatar';
+
+const imgArr = ["./images/anahtar.jpg","./images/cuzdan.jpg","./images/mobile.jpeg","./images/pixi.jpg"];
+
+const webimages = `http://visiontr.org/lo/`;
 
 export default function ControlledExpansionPanels() {
-
-
-
   const [state, setState] = React.useState({
-   
     url: "http://visiontr.org/lo/api.php",
     title: "",
     description: "",
@@ -23,8 +24,6 @@ export default function ControlledExpansionPanels() {
     location: "",
     arre: []
   });
-
-
 
   useEffect(() => {
     getData();
@@ -37,11 +36,7 @@ export default function ControlledExpansionPanels() {
     setState({ arre: data });
   };
 
-
   console.log(state.arre);
-  
-
-  
 
   return (
     <Container className={Styles.expansionP}>
@@ -59,13 +54,23 @@ export default function ControlledExpansionPanels() {
               {item.description}
             </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
+          <ExpansionPanelDetails >
             <Typography>
-              {item.date}
+              <b>Date of found:</b> {item.date}
               <br />
-              {item.color}
+              <b>Color:</b> {item.color}
               <br />
-              {item.location}
+              <b>City:</b> {item.city}
+              <br />
+              <b>Address:</b> {item.location}
+              <br />
+              <b>Reward Value:</b> {item.rewards}{" "}
+              <b>
+                <em>tl</em>
+              </b>
+            </Typography>
+            <Typography>
+              <Avatar src={webimages+item.image} className={Styles.flexD} alt={item.cat}/>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>
