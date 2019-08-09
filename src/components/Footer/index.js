@@ -3,13 +3,14 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Box, Link } from "@material-ui/core";
 
 
+
 function FooterPage ()  {
 
     return (
 
-<Box color="black">
-      <Container>
-        <Row >
+     <Box color="black" className="background-color: blue">
+       <Container>
+        <Row>
           <Col>
             <h5 className="text-uppercase mb-4 font-weight-bold">
               Lost & Found 
@@ -27,16 +28,16 @@ function FooterPage ()  {
             <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
             <ul className="list-unstyled">
               <p>
-                <a href="#!">Home</a>
+                <a href="#!" className="text-dark" >HOME</a>
               </p>
               <p>
-                <a href="#!">ABOUT US</a>
+                <a href="#!" className="text-dark">ABOUT US</a>
               </p>
               <p>
-                <a href="#!">Success Stories</a>
+                <a href="#!"className="text-dark">SUCCESS STORIES</a>
               </p>
               <p>
-                <a href="#!">ReWARDS</a>
+                <a href="#!"className="text-dark">REWARDS</a>
               </p>
             </ul>
           </Col>
@@ -78,13 +79,14 @@ function FooterPage ()  {
           </Col>
           <hr className="clearfix w-100 d-md-none" />
         </Row>
-      </Container>
+      
       <div className="footer-copyright text-center py-3">
         <Container fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <Link href="#"> Lost & Found </Link>
+          <Link href="http://localhost:3000/"> Lost & Found </Link>
         </Container>
       </div>
+      </Container>
     </Box>
   );
 }

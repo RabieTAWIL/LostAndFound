@@ -1,16 +1,18 @@
 import React from 'react';
-import Container from '@material-ui/core/Container';
-import SuccessStory from './components/Success';
 import FooterPage from './components/Footer';
-
+import Logoes from './logos';
+// import ModalGallery from './modal gallery';
 
 
 function App() {
   return (
-    <Container>
-      <SuccessStory/>
+    <div>
+       <Logoes/>
+      
       <FooterPage/>
-    </Container>
+    
+      {/* <ModalGallery/> */}
+    </div>
   );
 }
 
