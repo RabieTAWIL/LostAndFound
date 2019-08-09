@@ -7,6 +7,7 @@ import Styles from './index.module.css';
 
 
 export default function Rewards(props) {
+ 
   const [state, setState] = React.useState({
 
     lost: '',
@@ -23,7 +24,7 @@ export default function Rewards(props) {
 
   const getData = async () => {
     const url = `${state.url}?data=get&cat=${lost}&lo=${location}`;
-    console.log(url);
+  
     const response = await fetch(url);
 
     const data = await response.json();
@@ -31,12 +32,8 @@ export default function Rewards(props) {
 
 
   };
-  /**  async function fetchProjects() {
-    const url = `${state.url}?lo=${lost}&lo${location}`
-    const response = await fetch(url);
-    const json = await response.json();
-    this.setState({ re: json });
-  } */
+
+
 
 
   console.log(location);

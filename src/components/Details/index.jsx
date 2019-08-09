@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
+
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -59,44 +60,77 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function DetailsPage() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState("one");
 
-  function handleChange(event, newValue) {
-    setValue(newValue);
-  }
+
+
+
+export default function DetailsPage(props) {
+  const classes = useStyles();
+  
+
+  
+
+  const [values, setvalues] = React.useState({
+    lost: "",
+    location: "",
+    url: "http://visiontr.org/lo/api.php",
+    itemDitels: []
+  });
+
+  useEffect(() => {
+    getData();
+  }, []);
+  const id = props.location.id;
+
+  const getData = async () => {
+    const url = `${values.url}?data=id&id=${id}`;
+    
+    const response = await fetch(url);
+    console.log(response);
+    const data = await response.json();
+    setvalues({ itemDitels: data });
+  };
+  const webimages = `http://visontr.org/lo/`;
+
+
+  
+
+console.log(values.itemDitels);
+
+
+
 
   return (
     <Container className={classes.root}>
       <AppBar position="static">
         <Tabs
-          value={value}
-          onChange={handleChange}
+
+         
           aria-label="wrapped label tabs example"
         >
           <Tab
-            value="one"
+            
             label="Item ID and Name"
             wrapped
             {...a11yProps("one")}
           />
         </Tabs>
       </AppBar>
-      {detailsData.map(details => (
+     
         <div className={Styles.detailsFlex}>
-          <TabPanel value={value} index="one">
-              <img src={details.img} className={Styles.imgDiv}/>
+          <TabPanel value="one" index="one">
+              <img src={values.itemDitels.image} className={Styles.imgDiv}/>
           </TabPanel>
-          <TabPanel value={value} index="one">
-              <p>{details.item}</p>
-              <p>{details.color}</p>
-              <p>{details.location}</p>
-              <p>{details.tarih}</p>
-              <p>{details.description}</p>
+          <TabPanel value="one" index="one">
+              <p>{values.itemDitels.cat}</p>
+              <p>{values.itemDitels.color}</p>
+              <p>{values.itemDitels.location}</p>
+              <p>{values.itemDitels.fldate}</p>
+              <p>{values.itemDitels.description}</p>
           </TabPanel>
         </div>
-      ))}
+    
+
     </Container>
   );
 }

@@ -1,4 +1,5 @@
-import React from "react";
+import React,{useEffect} from "react";
+
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -12,41 +13,33 @@ export default function SimpleCard() {
   const bull = <span className={Styles.bullet}>•</span>;
 
 
-  const arr = [
-    {
-      title: "Iphone",
-      description: "50$",
-      date: "9.Agu.2019",
-      model: "5",
-      color: "black",
-      location: "Gaziantep"
-    },
-    {
-      title: "Backpack",
-      description: "No Reward",
-      date: "12.Jun.2019",
-      model: "5",
-      color: "brown",
-      location: "Izmir"
-    },
-    {
-      title: "Car key",
-      description: "20$",
-      date: "30.Jul.2019",
-      model: "--",
-      color: "silver",
-      location: "Istanbul"
-    },
+  const [state, setState] = React.useState({
+   
+    url: "http://visiontr.org/lo/api.php",
+    title: "",
+    description: "",
+    date: "",
+    color: "",
+    location: "",
+    arre: []
+  });
 
-    {
-      title: "Kindle",
-      description: "No Reward",
-      date: "8.Agu.2019",
-      model: "--",
-      color: "black",
-      location: "Adana"
-    }
-  ];
+
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const res = await fetch(`${state.url}?data=jjj`);
+    console.log(res);
+    const data = await res.json();
+    setState({ arre: data });
+  };
+
+
+  console.log(state.arre);
+
 
   return (
     <Container>
@@ -55,7 +48,8 @@ export default function SimpleCard() {
       <h1 className={Styles.tag1}>REWARD ITEMS NEAR YOU</h1>
       <div className={Styles.flex}>
 
-        {arr.map(item => (
+        {state.arre.map(item => (
+
           <Card className={Styles.card} key={item.title}>
             <CardContent>
               <Typography

@@ -15,34 +15,18 @@ import { Link } from "react-router-dom";
 function LostForm() {
   const [state, setState] = React.useState({
     open: false,
-    url: "https://codediscovery.site/lo/api.php",
+    url: "http://visontr.org/lo/api.php",
+
     searchedThing: "",
     location: "",
     results: [],
     jsson: []
   });
 
-  /*
- handleChange = name => event => {
-    this.setState({ ...this.state, [name]: event.target.value });
-  };
-
-
-  e =>{this.setState({[e.target.name]: e.target.value})}
-
-
-fetchProjects = async () => {
-  const url = `${this.state.url}?lost=${this.state.searchedThing}&loc=${this.state.location}`
-  const response = await fetch(url);
-  const data = await response.json();
-  this.setState({ images: data });
-}
-
-
-*/
+  
 
   const handleChange = name => event => {
-    setState({ ...state, [name]: Number(event.target.value) });
+    setState({ ...state, [name]: event.target.value});
   };
 
   function handleClickOpen() {
@@ -59,11 +43,13 @@ fetchProjects = async () => {
     loc: state.location
   };
 
+ 
+
+
   useEffect(() => {
     console.log("usreeeeee");
   }, []);
 
-  console.log(state);
   return (
     <div>
       <Button onClick={handleClickOpen}>Lost Something</Button>
@@ -88,9 +74,9 @@ fetchProjects = async () => {
                 input={<Input id="age-native-simple" />}
               >
                 <option value="" />
-                <option value={2}>Mobile</option>
-                <option value={3}>Computer</option>
-                <option value={4}>Bags</option>
+                <option value={5}>Mobile</option>
+                <option value={6}>Computer</option>
+                <option value={7}>Bags</option>
               </Select>
             </FormControl>
             <br />
@@ -106,7 +92,7 @@ fetchProjects = async () => {
                   <em>None</em>
                 </MenuItem>
                 <MenuItem value={2}>Istanbul</MenuItem>
-                <MenuItem value={1}>Gaziantep</MenuItem>
+                <MenuItem value={5}>Gaziantep</MenuItem>
                 <MenuItem value={3}>Mersin</MenuItem>
               </Select>
             </FormControl>
