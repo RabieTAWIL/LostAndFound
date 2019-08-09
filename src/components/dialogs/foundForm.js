@@ -14,6 +14,7 @@ import Styles from "./index.module.css";
 import { makeStyles } from "@material-ui/core/styles";
 import ImageUpload from "../ImagesUpload";
 import DataField from '../DataField';
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -44,6 +45,10 @@ export default function FoundForm() {
   function handleClose() {
     setOpen(false);
   }
+  const newTo = {
+    pathname: "/founded"
+    
+  };
 
   return (
     <div>
@@ -88,7 +93,7 @@ export default function FoundForm() {
             className={classes.textField}
             margin="normal"
           />
-          <DataField/>
+          
           <TextField
             id="standard-with-placeholder"
             label="Color"
@@ -112,15 +117,16 @@ export default function FoundForm() {
             className={classes.textField}
             margin="normal"
           />
+          <DataField/>
         </DialogContent>
-        <ImageUpload />
+      
 
         <DialogActions>
           <Button onClick={handleClose} color="primary">
             Cancel
           </Button>
           <Button to="rewards/index" color="primary">
-            Submit
+          <Link to={newTo}>Search</Link>
           </Button>
         </DialogActions>
       </Dialog>

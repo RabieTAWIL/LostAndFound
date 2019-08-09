@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActionArea from "@material-ui/core/CardActionArea";
@@ -10,45 +10,8 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Styles from "./styles.module.css";
 import Grid from "@material-ui/core/Grid";
+import { Link } from "react-router-dom";
 
-const foundedItmes = [
-  {
-    title: "Cuzdan",
-    img: "./images/cuzdan.jpg",
-    description:
-      "Thank you so much for finding my phone. It  data being so professional and fast."
-  },
-  {
-    title: "pixie box",
-    img: "./images/pixi.jpg",
-    description:
-      "Thank you very much. I now have my prized possession back after only 2 days."
-  },
-  {
-    title: "Mobile",
-    img: "./images/mobile.jpeg",
-    description:
-      "The customer host found and turned in my iPad. I am incredibly grateful!"
-  },
-  {
-    title: "Cuzdan",
-    img: "./images/cuzdan.jpg",
-    description:
-      "Thank you so much for finding my phone so thank you for being so professional and fast."
-  },
-  {
-    title: "pixie box",
-    img: "./images/pixi.jpg",
-    description:
-      "Thank you very much. I now have my prized possession back after only 2 days."
-  },
-  {
-    title: "Mobile",
-    img: "./images/mobile.jpeg",
-    description:
-      "The customer host found and turned in my iPad. I am incredibly grateful!"
-  }
-];
 
 const useStyles = makeStyles({
   card: {
@@ -62,16 +25,39 @@ const useStyles = makeStyles({
 export default function FoundedItems() {
   const classes = useStyles();
 
+
+  const [state, setState] = React.useState({
+    lost: "",
+    location: "",
+    url: "http://visiontr.org/lo/api.php",
+    foundededItmes: []
+  });
+
+
+
+  useEffect(() => {
+    getData();
+  }, []);
+
+  const getData = async () => {
+    const url = `${state.url}?data=founded`;
+    
+    const response = await fetch(url);
+    const data = await response.json();
+    setState({ foundededItmes: data });
+  };
+  const webimages = `http://visiontr.org/lo/`;
+
   return (
     <Container className={Styles.flexCard}>
       <Grid container spacing={4}>
-        {foundedItmes.map(founded => (
+        {state.foundededItmes.map(founded => (
           <Grid item xs={12} sm={6} md={4}>
             <Card className={classes.card}>
               <CardActionArea>
                 <CardMedia
                   className={classes.media}
-                  image={founded.img}
+                  image={webimages + founded.image}
                   title="Contemplative Reptile"
                 />
                 <CardContent>
@@ -88,8 +74,9 @@ export default function FoundedItems() {
                 </CardContent>
               </CardActionArea>
               <CardActions>
-                <Button size="small" color="primary">
-                  Learn More
+              <Button  size="small" color="primary">
+                <Link to={{pathname: "/details", id:founded.id} }>Learn More</Link>
+                  
                 </Button>
               </CardActions>
             </Card>
