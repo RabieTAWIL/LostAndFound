@@ -1,4 +1,5 @@
 import React,{useEffect} from "react";
+
 import PropTypes from "prop-types";
 import { makeStyles } from "@material-ui/core/styles";
 import AppBar from "@material-ui/core/AppBar";
@@ -62,6 +63,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
+
 export default function DetailsPage(props) {
   const classes = useStyles();
   
@@ -97,10 +99,12 @@ console.log(values.itemDitels);
 
 
 
+
   return (
     <Container className={classes.root}>
       <AppBar position="static">
         <Tabs
+
          
           aria-label="wrapped label tabs example"
         >
@@ -126,6 +130,7 @@ console.log(values.itemDitels);
           </TabPanel>
         </div>
     
+
     </Container>
   );
 }

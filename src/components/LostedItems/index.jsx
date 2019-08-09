@@ -10,7 +10,9 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Styles from "./styles.module.css";
 import Grid from "@material-ui/core/Grid";
+
 import { Link } from "react-router-dom";
+
 
 const useStyles = makeStyles({
   card: {
@@ -28,6 +30,7 @@ export default function LostedItems(props) {
     lost: "",
     location: "",
     url: "http://visiontr.org/lo/api.php",
+
     lostedItmes: []
   });
 
@@ -45,8 +48,10 @@ export default function LostedItems(props) {
     const data = await response.json();
     setState({ lostedItmes: data });
   };
+
   const webimages = `http://visontr.org/lo/`;
   
+
 
   return (
     <Container className={Styles.flexCard}>

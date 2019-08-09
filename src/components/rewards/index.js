@@ -27,19 +27,13 @@ export default function Rewards(props) {
   
     const response = await fetch(url);
 
-
     const data = await response.json();
     setState({ re: data });
 
 
   };
 
-  /**  async function fetchProjects() {
-    const url = `${state.url}?lo=${lost}&lo${location}`
-    const response = await fetch(url);
-    const json = await response.json();
-    this.setState({ re: json });
-  } */
+
 
 
   console.log(location);

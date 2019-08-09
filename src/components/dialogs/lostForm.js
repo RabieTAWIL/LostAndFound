@@ -16,30 +16,14 @@ function LostForm() {
   const [state, setState] = React.useState({
     open: false,
     url: "http://visontr.org/lo/api.php",
+
     searchedThing: "",
     location: "",
     results: [],
     jsson: []
   });
 
-  /*
- handleChange = name => event => {
-    this.setState({ ...this.state, [name]: event.target.value });
-  };
-
-
-  e =>{this.setState({[e.target.name]: e.target.value})}
-
-
-fetchProjects = async () => {
-  const url = `${this.state.url}?lost=${this.state.searchedThing}&loc=${this.state.location}`
-  const response = await fetch(url);
-  const data = await response.json();
-  this.setState({ images: data });
-}
-
-
-*/
+  
 
   const handleChange = name => event => {
     setState({ ...state, [name]: event.target.value});
@@ -61,6 +45,10 @@ fetchProjects = async () => {
 
  
 
+
+  useEffect(() => {
+    console.log("usreeeeee");
+  }, []);
 
   return (
     <div>
