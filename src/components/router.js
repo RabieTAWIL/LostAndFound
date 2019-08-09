@@ -18,6 +18,8 @@ const Router = () => (
       <Route path="/lost" component={LostedItems} />
       <Route path="/rewards" component={ControlledExpansionPanels} />
       <Route path="/details" component={DetailsPage}/>
+      <Route path="/founded" component={FoundedItems}/>
+  
       
     </Switch>
     <FooterPage />
