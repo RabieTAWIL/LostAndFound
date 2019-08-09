@@ -14,13 +14,10 @@ const Router = () => (
     <ButtonAppBar />
     <Switch>
       <Route path="/" component={App} exact />
-      <Route path="/found" component={FoundedItems} />
+      <Route path="/founded" component={FoundedItems} />
       <Route path="/lost" component={LostedItems} />
       <Route path="/rewards" component={ControlledExpansionPanels} />
       <Route path="/details" component={DetailsPage}/>
-      <Route path="/founded" component={FoundedItems}/>
-  
-      
     </Switch>
     <FooterPage />
   </BrowserRouter>

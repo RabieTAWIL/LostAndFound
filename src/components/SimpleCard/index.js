@@ -1,4 +1,5 @@
 import React,{useEffect} from "react";
+
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
@@ -48,6 +49,7 @@ export default function SimpleCard() {
       <div className={Styles.flex}>
 
         {state.arre.map(item => (
+
           <Card className={Styles.card} key={item.title}>
             <CardContent>
               <Typography
