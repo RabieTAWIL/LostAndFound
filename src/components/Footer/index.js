@@ -2,10 +2,15 @@ import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Box, Link } from "@material-ui/core";
 
-function FooterPage() {
-  return (
-    <Box color="black">
-      <Container>
+
+
+function FooterPage ()  {
+
+    return (
+
+     <Box color="black" className="background-color: blue">
+       <Container>
+
         <Row>
           <Col>
             <h5 className="text-uppercase mb-4 font-weight-bold">
@@ -22,16 +27,18 @@ function FooterPage() {
             <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
             <ul className="list-unstyled">
               <p>
-                <a href="/">Home</a>
+                <a href="#!" className="text-dark" >HOME</a>
+
               </p>
               <p>
-                <a href="#!">ABOUT US</a>
+                <a href="#!" className="text-dark">ABOUT US</a>
               </p>
               <p>
-                <a href="found">Success Stories</a>
+                <a href="#!"className="text-dark">SUCCESS STORIES</a>
               </p>
               <p>
-                <a href="lost">ReWARDS</a>
+                <a href="#!"className="text-dark">REWARDS</a>
+
               </p>
             </ul>
           </Col>
@@ -72,80 +79,17 @@ function FooterPage() {
           </Col>
           <hr className="clearfix w-100 d-md-none" />
         </Row>
-      </Container>
+      
       <div className="footer-copyright text-center py-3">
         <Container fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
+
           <Link href="/"> Lost & Found </Link>
         </Container>
       </div>
+      </Container>
     </Box>
   );
 }
 
 export default FooterPage;
-
-// import React from 'react';
-// import { Container, Icon } from '@material-ui/core';
-// import Box from '@material-ui/core/Box';
-// import Link from '@material-ui/core/Link';
-// import {Row, Col} from 'react-bootstrap';
-
-// function FooterPage() {
-//     return (
-//         <Box color="black" className="font-small pt-4 mt-4">
-//               <Container fluid className="text-center text-md-left">
-//              <Row>
-//                   <Col md="5">
-//                  <h5>Lost & Found </h5>
-//                      <p>
-//                        Here you can Find whar Do you Lost , It is your do not forgive ...
-//                      </p>
-//                    </Col>
-//                    <Col md="3">
-//                      <h5>Social Media</h5>
-//                      <ul>
-//                        <li className="list-unstyled">
-//                         <Link href="#" color="inherit"> FaceBook</Link>
-//                        </li>
-//                      <li className="list-unstyled">
-//                          <Link href="#" color="inherit">Twitter</Link>
-//                        </li>
-//                        <li className="list-unstyled">
-//                          <Link href="#" color="inherit">Inistagram</Link>
-//                        </li>
-//                        <li className="list-unstyled">
-//                          <Link href="#" color="inherit">LinkedIn</Link>
-//                        </li>
-//                      </ul>
-//                    </Col>
-//                    <Col md="3">
-//                      <h5 className="title">Useful Links</h5>
-//                      <ul>
-//                        <li className="list-unstyled">
-//                          <Link href="#" color="inherit">Home</Link>
-//                        </li>
-//                      <li className="list-unstyled">
-//                          <Link href="#" color="inherit">About us</Link>
-//                        </li>
-//                        <li className="list-unstyled">
-//                          <Link href="#" color="inherit">Contact us</Link>
-//                        </li>
-//                        <li className="list-unstyled">
-//                          <Link href="#" color="inherit">Re:coded</Link>
-//                        </li>
-//                      </ul>
-//                    </Col>
-//                    </Row>
-//                </Container>
-//                <div className="footer-copyright text-center py-3">
-//                  <Container fluid>
-//                    &copy; {new Date().getFullYear()} Copyright: <a href="#"> my love is coding every time </a>
-//                  </Container>
-//                </div>
-//              </Box>
-
-//     );
-//     }
-
-// export default FooterPage;
