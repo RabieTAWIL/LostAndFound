@@ -1,18 +1,20 @@
 import React from 'react';
-import SuccessStory from './components/Success';
 import FooterPage from './components/Footer';
 import Logoes from './logos';
-// import ModalGallery from './modal gallery';
+import SuccessStory from "./components/Success";
+import ImageGridList from "./components/slider";
+import SimpleCard from "./components/SimpleCard";
 
 
 function App() {
   return (
     <div>
-       <Logoes/>
-      
-      <FooterPage/>
-    
-      {/* <ModalGallery/> */}
+
+      <ImageGridList />
+      <SimpleCard />
+      <SuccessStory />
+      <Logoes/>
+
     </div>
   );
 }
