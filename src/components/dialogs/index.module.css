@@ -1,33 +1,17 @@
-
-
-    root {
-      display: 'flex';
-      flex-wrap: 'wrap';
-    }
-    .formControl {
-        width: 50vh;
-    }
+root {
+  display: "flex";
+  flex-wrap: "wrap";
+}
+.formControl {
+  width: 50vh;
+}
 .kassem {
-    width: -webkit-fill-available;
+  width: -webkit-fill-available;
 }
 .textField {
-    width: 350;
-  }
-  .container {
-    display: 'flex';
-    flex-wrap: 'wrap';
-  }
-
-/* for new form 
-
-container: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
-  formControl: {
-    margin: theme.spacing(1),
-    minWidth: 120,
-
-*/
-  
-  
+  width: 350;
+}
+.container {
+  display: "flex";
+  flex-wrap: "wrap";
+}

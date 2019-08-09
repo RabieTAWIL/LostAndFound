@@ -22,7 +22,7 @@ function FooterPage() {
             <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
             <ul className="list-unstyled">
               <p>
-                <a href="..">Home</a>
+                <a href="/">Home</a>
               </p>
               <p>
                 <a href="#!">ABOUT US</a>
@@ -76,7 +76,7 @@ function FooterPage() {
       <div className="footer-copyright text-center py-3">
         <Container fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
-          <Link href=".."> Lost & Found </Link>
+          <Link href="/"> Lost & Found </Link>
         </Container>
       </div>
     </Box>
