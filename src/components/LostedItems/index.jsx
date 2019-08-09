@@ -30,7 +30,6 @@ export default function LostedItems(props) {
     lost: "",
     location: "",
     url: "http://visiontr.org/lo/api.php",
-
     lostedItmes: []
   });
 
@@ -49,7 +48,7 @@ export default function LostedItems(props) {
     setState({ lostedItmes: data });
   };
 
-  const webimages = `http://visontr.org/lo/`;
+  const webimages = `http://visiontr.org/lo/`;
   
 
 
