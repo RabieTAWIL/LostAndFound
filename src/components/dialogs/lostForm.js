@@ -74,9 +74,9 @@ function LostForm() {
                 input={<Input id="age-native-simple" />}
               >
                 <option value="" />
-                <option value={5}>Mobile</option>
-                <option value={6}>Computer</option>
-                <option value={7}>Bags</option>
+                <option value="Mobile">Mobile</option>
+                <option value="Computer">Computer</option>
+                <option value="Bags">Bags</option>
               </Select>
             </FormControl>
             <br />
@@ -91,9 +91,9 @@ function LostForm() {
                 <MenuItem value="">
                   <em>None</em>
                 </MenuItem>
-                <MenuItem value={2}>Istanbul</MenuItem>
-                <MenuItem value={5}>Gaziantep</MenuItem>
-                <MenuItem value={3}>Mersin</MenuItem>
+                <MenuItem value="Istanbul">Istanbul</MenuItem>
+                <MenuItem value="Gaziantep">Gaziantep</MenuItem>
+                <MenuItem value="Mersin">Mersin</MenuItem>
               </Select>
             </FormControl>
           </form>
@@ -103,7 +103,7 @@ function LostForm() {
             Cancel
           </Button>
           <Button onClick={handleClose} color="primary">
-            <Link to={newTo}>Search</Link>
+            <Link to={newTo}>Submit</Link>
           </Button>
         </DialogActions>
       </Dialog>

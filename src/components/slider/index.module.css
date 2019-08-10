@@ -1,10 +1,19 @@
 .kassem {
   text-align: center;
-  height: 85vh;
+  height: 80vh;
 }
 .center {
-  padding-top: 100px;
+  padding-top: 18rem;
+}
+.textColor{
+  color: aliceblue;
+  font-weight: bold;
 }
 .button {
   margin-right: 10px;
+}
+@media only screen and (max-width: 1300px) {
+  .center {
+    padding-top: 13rem;
+  }
 }

@@ -126,7 +126,7 @@ export default function FoundForm() {
             Cancel
           </Button>
           <Button to="rewards/index" color="primary">
-          <Link to={newTo}>Search</Link>
+          <Link to={newTo}>Submit</Link>
           </Button>
         </DialogActions>
       </Dialog>
