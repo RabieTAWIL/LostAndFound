@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Box, Link } from "@material-ui/core";
+import Styles from './Styles.module.css';
 
 
 
@@ -8,12 +9,12 @@ function FooterPage ()  {
 
     return (
 
-     <Box color="black" className="background-color: blue">
+     <Box color="white" className={Styles.fColor}>
        <Container>
 
         <Row>
           <Col>
-            <h5 className="text-uppercase mb-4 font-weight-bold">
+            <h5 className="text-uppercase mb-4 mt-5 font-weight-bold">
               Lost & Found
             </h5>
             <p>Here you can find and organize your content of your life.</p>
@@ -24,27 +25,27 @@ function FooterPage ()  {
           </Col>
           <hr className="clearfix w-100 d-md-none" />
           <Col md="2" lg="2" className="ml-auto">
-            <h5 className="text-uppercase mb-4 font-weight-bold">About</h5>
+            <h5 className="text-uppercase mb-4 mt-5 font-weight-bold">About</h5>
             <ul className="list-unstyled">
               <p>
-                <a href="#!" className="text-dark" >HOME</a>
+                <a href="/" className="text-white" >HOME</a>
 
               </p>
               <p>
-                <a href="#!" className="text-dark">ABOUT US</a>
+                <a href="#!" className="text-white">About US</a>
               </p>
               <p>
-                <a href="#!"className="text-dark">SUCCESS STORIES</a>
+                <a href="/details"className="text-white">DETAILS</a>
               </p>
               <p>
-                <a href="#!"className="text-dark">REWARDS</a>
+                <a href="/rewards"className="text-white">REWARDS</a>
 
               </p>
             </ul>
           </Col>
           <hr className="clearfix w-100 d-md-none" />
           <Col md="5" lg="3">
-            <h5 className="text-uppercase mb-4 font-weight-bold">Address</h5>
+            <h5 className="text-uppercase mb-4 mt-5 font-weight-bold">Address</h5>
             <p>
               <i className="fa fa-home mr-3" /> Gaziantep, gazimukhtar basha
               10012, TR
@@ -61,7 +62,7 @@ function FooterPage ()  {
           </Col>
           <hr className="clearfix w-100 d-md-none" />
           <Col md="2" lg="2" className="text-center">
-            <h5 className="text-uppercase mb-4 font-weight-bold">Follow us</h5>
+            <h5 className="text-uppercase mb-4 mt-5 font-weight-bold">Follow us</h5>
             <div className="mt-2 d-flex flex-column">
               <Link type="button" className="btn-floating btn-lg btn-fb">
                 <i className="fab fa-facebook-f" />
@@ -84,7 +85,7 @@ function FooterPage ()  {
         <Container fluid>
           &copy; {new Date().getFullYear()} Copyright:{" "}
 
-          <Link href="/"> Lost & Found </Link>
+          <Link href="/" className="text-white"> Lost & Found </Link>
         </Container>
       </div>
       </Container>

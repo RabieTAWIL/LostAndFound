@@ -12,13 +12,13 @@ export default function ButtonAppBar() {
     <div className={Styles.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" className={Styles.title}>
-            News
+          {/* <IconButton edge="start" color="inherit" aria-label="menu">
+          <MenuIcon />
+          </IconButton> */}
+          <Typography variant="p" className={Styles.title}>
+          <img src='https://demos.creative-tim.com/paper-dashboard/assets/img/logo-small.png' width="3.5%"/>
+            Lost and Found
           </Typography>
-          <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
     </div>

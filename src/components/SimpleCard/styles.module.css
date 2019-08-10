@@ -1,6 +1,6 @@
 .card {
   width: 238px;
-  background-image: url("https://images.unsplash.com/photo-1489674267075-cee793167910?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  /* background-image: url("https://images.unsplash.com/photo-1489674267075-cee793167910?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80"); */
 }
 .card:hover{
 	opacity: 0.3;

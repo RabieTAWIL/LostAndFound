@@ -8,6 +8,9 @@ import Typography from "@material-ui/core/Typography";
 import Styles from "./styles.module.css";
 import { Container } from "@material-ui/core";
 import SimpleAppBar from "../searchbar";
+import CardMedia from '@material-ui/core/CardMedia';
+
+const webimages = `http://visiontr.org/lo/`;
 
 export default function SimpleCard() {
   const bull = <span className={Styles.bullet}>•</span>;
@@ -51,6 +54,7 @@ export default function SimpleCard() {
         {state.arre.map(item => (
 
           <Card className={Styles.card} key={item.title}>
+            <CardMedia image={webimages+item.image}>
             <CardContent>
               <Typography
                 className={Styles.title}
@@ -68,10 +72,11 @@ export default function SimpleCard() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button className={Styles.halili} size="small">
-                Confirm
+              <Button className={Styles.halili} size="small" href="/rewards">
+                Learn More
               </Button>
             </CardActions>
+            </CardMedia>
           </Card>
         ))}
 

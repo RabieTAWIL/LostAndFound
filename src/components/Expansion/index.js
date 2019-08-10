@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import ExpansionPanel from "@material-ui/core/ExpansionPanel";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
@@ -54,8 +53,8 @@ export default function ControlledExpansionPanels() {
               {item.description}
             </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails >
-            <Typography>
+          <ExpansionPanelDetails>
+            <Typography className={Styles.size1}>
               <b>Date of found:</b> {item.date}
               <br />
               <b>Color:</b> {item.color}
@@ -69,8 +68,8 @@ export default function ControlledExpansionPanels() {
                 <em>tl</em>
               </b>
             </Typography>
-            <Typography>
-              <Avatar src={webimages+item.image} className={Styles.flexD} alt={item.cat}/>
+            <Typography className={Styles.size1}>
+              <img src={webimages+item.image} width='40%' alt={item.cat}/>
             </Typography>
           </ExpansionPanelDetails>
         </ExpansionPanel>

@@ -3,5 +3,9 @@
 }
 
 .flexD{
-  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+.size1{
+  max-width: 50%;
 }

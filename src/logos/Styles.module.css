@@ -1,0 +1,22 @@
+/* d-flex justify-content-center mb-5 mt-5 */
+.logos {
+  width: 90%;
+  border-radius: 50%;
+  -webkit-box-shadow: -1px 0px 5px 3px rgba(0,0,0,0.75);
+-moz-box-shadow: -1px 0px 5px 3px rgba(0,0,0,0.75);
+box-shadow: -1px 0px 5px 3px rgba(0,0,0,0.75);
+}
+.logos1 {
+    width: 90%;
+    border-radius: 50%;
+    height: 160px;
+    width: 160px;
+    -webkit-box-shadow: -1px 0px 5px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: -1px 0px 5px 3px rgba(0,0,0,0.75);
+  box-shadow: -1px 0px 5px 3px rgba(0,0,0,0.75);
+  }
+.container{
+    justify-content: center;
+    align-items: center;
+    
+}
